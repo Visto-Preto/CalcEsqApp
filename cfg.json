@@ -1,0 +1,120 @@
+{
+  "Portas": {
+    "Giro 1 plano": {},
+    "Giro 2 plano": {},
+    "Pivotante": {},
+    "CorrerFC": {},
+    "CorrerFL": {
+      "Suprema": {
+        "Perfils": {
+          "Marco Superior": {
+            " 0": [
+              ""
+            ],
+            "2": [
+              "SU - 001"
+            ],
+            "3": [
+              "SU - 010"
+            ],
+            "4": [
+              "SU - 121"
+            ],
+            "5": [
+              "SU - 605"
+            ]
+          },
+          "Marco Inferior": {
+            "0": [
+              "AL - 002"
+            ],
+            "2": [
+              "SU - 002"
+            ],
+            "3": [
+              "SU - 011"
+            ],
+            "4": [
+              "SU - 122"
+            ],
+            "5": [
+              "SU - 606"
+            ]
+          },
+          "Marco Lateral": {
+            "2": [
+              "SU - 003"
+            ],
+            "3": [
+              "SU - 012"
+            ],
+            "4": [
+              "SU - 123"
+            ],
+            "5": [
+              "SU - 607"
+            ]
+          },
+          "Complemento Lateral": [
+            "SU - 008"
+          ],
+          "Montante Central": [
+            "SU - 245"
+          ],
+          "Montante mao amiga CE": [
+            "SU - 242"
+          ],
+          "Montante mao amiga SE": [
+            "SU - 243"
+          ],
+          "Travessa": [
+            "SU - 225"
+          ],
+          "Baguete": [
+            "SU - 102"
+          ]
+        },
+        "Descontos": {
+          "Altura da Folha": [
+            3
+          ],
+          "Montante Central": [
+            5.5
+          ],
+          "Conexao mao Amiga ": [
+            4.2
+          ],
+          "Lateral": [
+            2.7
+          ],
+          "Complemento Lateral": [
+            1.5
+          ],
+          "Baguete": {
+            "Largura": [
+              0.2
+            ],
+            "Altura": [
+              20.2
+            ]
+          },
+          "Vidro": {
+            "Largura": [
+              0.4
+            ],
+            "Altura": [
+              18
+            ]
+          }
+        }
+      },
+      "Gold": {}
+    }
+  },
+  "Janelas": {
+    "CorrerFC": {},
+    "CorrerFL": {}
+  },
+  "Portiolas": {},
+  "Maximar": {}
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janela de Correr Fechamentos Lateral</title>
+</head>
+<body>
+	
+<style>
+
+table.sem-borda,
+table.sem-borda th,
+table.sem-borda td {
+  border: none !important;
+  }
+
+table {
+width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+</style>
+
+<p><a href="/">Inicio</a>/<a href="/janelas/correrfl">Janelas</a></p>
+<!-- FORMULÁRIO -->
+<form method="POST" action="/janelas/correrfl">
+
+<h3>Janela de correr com fechamento lateral</h3>
+
+<input type="radio" name="lateral" value="com"
+{% if lateral == "com" %} checked {% endif %}> Com Marco Lateral
+
+<input type="radio" name="lateral" value="sem"
+{% if lateral == "sem" %} checked {% endif %}> Sem Marco Lateral
+<br>
+
+<input type="radio" name="inferior" value="marco"
+{% if inferior == "marco" %} checked {% endif %}> Marco Inferior
+
+<input type="radio" name="inferior" value="trilho"
+{% if inferior == "trilho" %} checked {% endif %}> Trilho Tartaruga
+
+<br>
+<input type="radio" name="rold" value="120" {% if rold == "120" %} checked {% endif %} > Roldana RS 120Kg
+<input type="radio" name="rold" value="120" {% if rold == "120" %} checked {% endif %} > Roldana RS 120Kg
+<input type="radio" name="rold" value="150" {% if rold == "150" %} checked {% endif %} > Roldana RS 150kg
+
+
+<p>Largura
+<input type="number" placeholder="Largura" name="largura" value="{{largura}}"step="0.01" required>
+</p>
+
+<p>Altura
+<input type="number" placeholder="Altura" name="altura" value="{{altura}}" step="0.01" required>
+</p>
+
+<p>Folhas
+<input type="number" placeholder="Folhas" name="folhas" value="{{folhas}}" required>
+</p>
+
+<button type="submit">Calcular</button>
+</form>
+
+{% if show == True %}
+<div>
+<h3>Janela de Correr com {{ quatidades.qtdsVD }} Folhas Fechamento Lateral</h3>
+<h3>Largura: {{largura}} Altura: {{altura}} </h3>
+<table class="sem-borda">
+<tr>
+	<th>Observações</th>
+	<th>Vidro</th>
+</tr>
+<tr>
+	<td>
+		<p>{{ lateral.capitalize()}} Marco Lateral</p>
+		<p>{% if inferior == "marco" %}Com Marco inferior {% else %}Com Trilho Tartaruga {% endif %}</p>
+		<p>{% if rold == "120"%}Roldana RS 120Kg {% else %}oldana RS 150 Kg {% endif %}</p>
+	</td>
+	<td>
+		<table class="sem-borda">
+			<tr>
+				<td>{{ quantidades.qtdsVD }}x</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><img src="{{ url_for('static', filename='img/vidro.jpg') }}"  width="80"></td>
+				<td>{{alturas.altVD}}</td>
+			</tr>
+			<tr>
+				<td>{{larguras.largVD}}</td>
+				<td></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<table>
+	<tr>
+		<th>Descrição</th>
+		<th>Corte</th>
+		<th>Qtdes</th>
+	</tr>
+	<tr>
+		<td>Marco superior</td>
+		<td>{{larguras.marcoS}}</td>
+		<td>{{quantidades.qmarcoS}}</td>
+	</tr>
+	<tr>
+		<td>{%if inferior == "marco"%}Marco interior{%else%}Trilho tartaruga{%endif%}</td>
+		<td>{{larguras.marcoI}}</td>
+		<td>{{quantidades.qmarcoI}}</td>
+	</tr>
+	<tr>
+		<td>Marco lateral</td>
+		<td>{{alturas.marcoL}}</td>
+		<td>{{quantidades.qlateral}}</td>
+	</tr>
+	<tr>
+		<td>Complemento lateral</td>
+		<td>{{alturas.complemento}}</td>
+		<td>{{quantidades.qcompL}}</td>
+	</tr>
+	<tr>
+		<td>Montante central</td>
+		<td>{{alturas.montante}}</td>
+		<td>{{quantidades.qmontC}}</td>
+	</tr>
+	<tr>
+		<td>Montante mão amiga CE</td>
+		<td>{{alturas.montante}}</td>
+		<td>{{quantidades.qmontMA}}</td>
+	</tr>
+	<tr>
+		<td>Montante mão amiga SE</td>
+		<td>{{alturas.montante}}</td>
+		<td>{{quantidades.qmontMA}}</td>
+	</tr>
+	<tr>
+		<td>Travessa</td>
+		<td>{{larguras.travessa}}</td>
+		<td>{{quantidades.qtdsTrav}}</td>
+	</tr>
+	<tr>
+		<td>Baguete lateral</td>
+		<td>{{larguras.bagueteL}}</td>
+		<td>{{quantidades.qtdsBagA}}</td>
+	</tr>
+	<tr>
+		<td>Baguete altura</td>
+		<td>{{alturas.bagueteA}}</td>
+		<td>{{quantidades.qtdsBagL}}</td>
+	</tr>
+</table>
+
+</div>
+{% endif %}
+</body>
+</html>
