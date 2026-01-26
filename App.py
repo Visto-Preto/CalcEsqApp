@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from core import portacorrerfl, janelacorrerfl
 from core import descJanelaFL, descPortaFL
 
 def noneToNumb(x):
