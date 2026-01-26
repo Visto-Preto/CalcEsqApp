@@ -1,80 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>CalcEsqApp</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
 
-<body>
-    <p><a href="/">Inicio</a></p>
-    <h1>CalcEsqApp</h1>
-    <ul>
-        <h3>Portas</h3>
-        <li>Porta de Giro
-            <ul>   
-                <li>Suprema</li>
-                <li>Linha 30</li>
-            </ul>
-        </li>
-        <li>Porta Pivotante 
-            <ul>   
-                <li>Linha 30</li>
-                <li>Linha 42</li>
-            </ul>
-        </li>
-        <li>Porta de Correr Fechamento Central
-            <ul>   
-                <li><a href="">Suprema</a></li>
-                <li>Gold</li>
-            </ul>
-        </li>
-        <li>Porta de Correr Fechamentos Lateral
-            <ul>   
-                <li><a href="/portas/correrfl">Suprema</a></li>
-                <li>Gold</li>
-            </ul>
-        </li>
-    </ul>
-    <ul>
-        <h3>Janelas</h3>
-        <li>Janela de Correr Fechamentos Central
-            <ul>
-                <li>Suprema</li>
-            </ul>
-        </li>
-        <li>Janela de Correr Fechamentos Lateral 
-            <ul>
-                <li><a href="/janelas/correrfl">Suprema</a></li>
-            </ul>
-        </li>
-    </ul>
-    <ul> 
-        <h3>Maxim-Ar</h3>
-        <li>Simples
-            <ul>
-                <li>Suprema</li>
-            </ul>
-        </li>
-        <li> Muiltiplo
-            <ul>
-                <li>Suprema</li>
-            </ul>
-        </li>
-    </ul>
-    <ul>
-        <h3>Portiolas</h3>
-        <li>Giro 1 folha
-            <ul>
-                <li>Suprema</li>
-            </ul>
-        </li>
-        <li>Giro 2 folha
-            <ul>
-                <li>Suprema</li>
-            </ul>
-        </li>
-    </ul>
-</body>
+<body class="bg-light">
 
+<!-- HEADER -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">CalcEsqApp</span>
+    </div>
+</nav>
+
+<!-- CONTEÚDO -->
+<div class="container my-4">
+
+    <!-- PORTAS -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header fw-bold">🚪 Portas</div>
+        <div class="card-body">
+
+            <div class="mb-2">
+                <div class="fw-semibold">Porta de Giro</div>
+                <span class="badge bg-secondary">Suprema</span>
+                <span class="badge bg-secondary">Linha 30</span>
+            </div>
+
+            <div class="mb-2">
+                <div class="fw-semibold">Porta Pivotante</div>
+                <span class="badge bg-secondary">Linha 30</span>
+                <span class="badge bg-secondary">Linha 42</span>
+            </div>
+
+            <div class="mb-2">
+                <div class="fw-semibold">Correr – Fechamento Central</div>
+                <button class="btn btn-outline-primary btn-sm mt-1">Suprema</button>
+                <button class="btn btn-outline-secondary btn-sm mt-1">Gold</button>
+            </div>
+
+            <div>
+                <div class="fw-semibold">Correr – Fechamento Lateral</div>
+                <a href="/portas/correrfl"><button class="btn btn-outline-primary btn-sm mt-1">Suprema</button></a>
+                <button class="btn btn-outline-secondary btn-sm mt-1">Gold</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JANELAS -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header fw-bold">🪟 Janelas</div>
+        <div class="card-body">
+
+            <div class="mb-2">
+                <div class="fw-semibold">Correr – Fechamento Central</div>
+                <span class="badge bg-secondary">Suprema</span>
+            </div>
+
+            <div>
+                <div class="fw-semibold">Correr – Fechamento Lateral</div>
+                <a href="/janelas/correrfl"><button class="btn btn-outline-primary btn-sm mt-1">Suprema</button></a>
+                <button class="btn btn-outline-secondary btn-sm mt-1">Gold</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MAXIM-AR -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header fw-bold">🪟 Maxim-Ar</div>
+        <div class="card-body">
+            <span class="badge bg-secondary">Simples – Suprema</span>
+            <span class="badge bg-secondary">Múltiplo – Suprema</span>
+        </div>
+    </div>
+
+    <!-- PORTIOLAS -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header fw-bold">🚪 Portiolas</div>
+        <div class="card-body">
+            <span class="badge bg-secondary">Giro 1 folha – Suprema</span>
+            <span class="badge bg-secondary">Giro 2 folhas – Suprema</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
 </html>
