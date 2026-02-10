@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SU-111 • CalcEsqApp
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <form method="POST" action="/su111">
+
+        <h3 class="mb-3">Fixo com SU-111</h3>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">Largura</span>
+                    <input type="number"
+                           class="form-control"
+                           name="largura"
+                           step="0.01"
+                           value="{{ largura }}"
+                           required>
+                </div>
+
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">Altura</span>
+                    <input type="number"
+                           class="form-control"
+                           name="altura"
+                           step="0.01"
+                           value="{{ altura }}"
+                           required>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Calcular
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+    {% if show %}
+
+    <div class="row g-3 mb-4">
+
+        <!-- VIDRO -->
+        <div class="col-12 col-md-4 text-center">
+            <div class="border rounded p-3 h-100">
+                <h6 class="fw-bold">Vidro</h6>
+                <div class="fw-semibold">1x</div>
+
+                <div class="d-flex justify-content-center align-items-center my-2">
+                    <img src="{{ url_for('static', filename='img/vidro.jpg') }}"
+                         style="max-width:80px">
+                    <span class="ms-2 fw-semibold">
+                        {{ vidro[1] }}
+                    </span>
+                </div>
+
+                <div class="fw-semibold">
+                    {{ vidro[0] }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm text-center align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Corte</th>
+                        <th>Qtd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in cortes %}
+                    <tr>
+                        <td>{{ i[0].capitalize() }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

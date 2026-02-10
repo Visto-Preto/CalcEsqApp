@@ -69,6 +69,18 @@
 
 
 <div class="container mt-4">
+	
+	
+	<div class="text-center mb-4">
+  <img 
+    src="{{ url_for('static', filename='img/porta_correr.png') }}"
+    class="img-fluid rounded shadow-sm"
+    style="max-height: 220px;"
+    alt="Porta de correr com fechamento lateral">
+     </div>
+     
+     
+     
   <!-- FORMULÁRIO -->
   <form method="POST" action="/portas/correrfl">
 
@@ -168,7 +180,7 @@
 
     <div class="text-center mb-3">
       <h4 class="fw-bold">
-        Janela de Correr – {{ folhas }} Folhas (Fechamento Lateral)
+        Porta de Correr – {{ folhas }} Folhas (Fechamento Lateral)
       </h4>
       <div class="text-muted">
         Largura: {{ largura }} | Altura: {{ altura }}
