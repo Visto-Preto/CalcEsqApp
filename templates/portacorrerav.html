@@ -9,20 +9,16 @@ Porta de correr atraz do vão • CalcEsqApp
 <div class="container mt-4">
 	
 	
-	<div class="text-center mb-4">
-  <img 
-    src="{{ url_for('static', filename='img/correrav.jpg') }}"
-    class="img-fluid rounded shadow-sm"
-    style="max-height: 220px;"
-    alt="Porta de correr com fechamento lateral">
-</div>
-	
-	
-	
-
     <form method="POST" action="/portacorrerav">
 
         <h3 class="mb-3">Porta de correr atraz do vão</h3>
+        	<div class="text-center mb-4">
+                <img 
+                    src="{{ url_for('static', filename='img/correrav.png') }}"
+                    class="img-fluid rounded shadow-sm"
+                    style="max-height: 220px;"
+                    alt="Porta de correr com fechamento lateral">
+            </div>
 
         <div class="card shadow-sm mb-4">
             <div class="card-body">
@@ -69,7 +65,7 @@ Porta de correr atraz do vão • CalcEsqApp
                 <div class="fw-semibold">1x</div>
 
                 <div class="d-flex justify-content-center align-items-center my-2">
-                    <img src="{{ url_for('static', filename='img/vidro.jpg') }}"
+                    <img src="{{ url_for('static', filename='img/vidro.png') }}"
                          style="max-width:80px">
                     <span class="ms-2 fw-semibold">
                         {{ vidro[1] }}

@@ -6,35 +6,295 @@ Início • CalcEsqApp
 
 {% block content %}
 
-<div class="container py-3">
+<div class="container py-4" style="max-width:1000px;">
 
-    <!-- Cabeçalho do app -->
-    <div class="mb-4">
-        <h4 class="fw-bold mb-1">CalcEsqApp</h4>
+    <!-- Cabeçalho -->
+    <div class="text-center mb-5">
+
+        <h3 class="fw-bold">
+            CalcEsqApp
+        </h3>
+
         <small class="text-muted">
-            Ambiente de cálculo de esquadrias
+            Calculadora de esquadrias de alumínio
         </small>
+
     </div>
 
-    <!-- Card informativo simples -->
-    <div class="card border-0 shadow-sm mb-3">
-        <div class="card-body">
 
-            <div class="d-flex justify-content-between align-items-center">
-                <span class="text-muted small">Status do sistema</span>
-                <span class="badge bg-success">Ativo</span>
-            </div>
+    <!-- LINHA SUPREMA -->
 
-            <hr>
+    <div class="mb-4">
 
-            <ul class="list-unstyled mb-0 text-muted small">
-                <li>✔ Cálculo de portas</li>
-                <li>✔ Cálculo de janelas</li>
-                <li>✔ Medidas precisas</li>
-            </ul>
+        <div class="d-flex align-items-center mb-3">
+
+            <h5 class="fw-bold mb-0">
+                Linha Suprema
+            </h5>
+
+            <span class="badge bg-secondary ms-2">
+                Atual
+            </span>
 
         </div>
+
+        <div class="row g-3">
+
+            <!-- Janela correr 3 folhas  moveis vz vz vd-->
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <a href="/janelas/correrfl" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/janela3folhas.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        <div class="fw-semibold mt-2">
+                            Janela Correr 3 F
+                        </div>
+                        <small class="text-muted">
+                            FL Suprema
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Janela correr 2 folhas  moveis-->
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <a href="/janelas/correrfl" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/janela2folhas.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        <div class="fw-semibold mt-2">
+                            Janela Correr
+                        </div>
+                        <small class="text-muted">
+                            FL Suprema
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Janela de correr com 2 follhas moveis + 2 folhas fixas-->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="/portas/correrfl" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/janela4folhas.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+                        <div class="fw-semibold mt-2">
+                            Janela Correr
+                        </div>
+                        <small class="text-muted">
+                            FC Suprema
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Porta correr FL -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="/portas/correrfl" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/correrfl.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+                        <div class="fw-semibold mt-2">
+                            Porta Correr
+                        </div>
+                        <small class="text-muted">
+                            FL Suprema
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+
+                        <!-- Porta correr FC -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="/portas/correrfl" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/correrfc.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+                        <div class="fw-semibold mt-2">
+                            Porta Correr
+                        </div>
+                        <small class="text-muted">
+                            FC Suprema
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- SU111 -->
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <a href="/su111" class="text-decoration-none">
+
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/fixo.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+
+                        <div class="fw-semibold mt-2">
+                            Fixo SU-111
+                        </div>
+
+                        <small class="text-muted">
+                            Suprema
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Porta atrás do vão -->
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <a href="/portacorrerav" class="text-decoration-none">
+
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/correrav.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 55px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+
+                        <div class="fw-semibold mt-2">
+                            Porta Atrás do Vão
+                        </div>
+
+                        <small class="text-muted">
+                            Suprema
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <!-- Porta de giro -->
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <a href="/portagiro" class="text-decoration-none">
+
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+
+                        <div class="display-6">
+                        <div class="display-6">
+                              <img 
+                                src="{{ url_for('static', filename='img/portagiro1.png') }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 50px;"
+                                alt="janela de correr com 2 folhas moveis">
+                        </div>
+                        </div>
+
+                        <div class="fw-semibold mt-2">
+                            Porta de giro
+                        </div>
+
+                        <small class="text-muted">
+                            Suprema
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
+
+
+
+    <!-- LINHA GOLD (futuro) -->
+
+    <div class="mb-4">
+
+        <h5 class="fw-bold text-muted mb-3">
+            Linha Gold
+        </h5>
+
+        <div class="card border-0 bg-light p-3 text-center">
+
+            <small class="text-muted">
+                Ferramentas em desenvolvimento
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LINHA 30 (futuro) -->
+
+    <div class="mb-4">
+
+        <h5 class="fw-bold text-muted mb-3">
+            Linha 30
+        </h5>
+
+        <div class="card border-0 bg-light p-3 text-center">
+
+            <small class="text-muted">
+                Ferramentas em desenvolvimento
+            </small>
+
+        </div>
+
+    </div>
+
+
 
 </div>
 
